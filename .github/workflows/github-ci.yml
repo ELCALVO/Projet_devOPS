@@ -1,0 +1,11 @@
+jobs:
+        build_main:
+                runs-on: ubuntu-latest
+                steps:
+                        - run: mvn compile
+
+        test_main:
+                runs-on: ubuntu-latest
+                needs: [build-main]
+                steps:
+                        - run: mvn test
