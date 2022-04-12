@@ -29,5 +29,5 @@ jobs:
           coverage_report_name: Coverage
           coverage_report_title: Jacoco
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          minimum_coverage: 80
+          minimum_coverage: 60
           fail_below_threshold: true
