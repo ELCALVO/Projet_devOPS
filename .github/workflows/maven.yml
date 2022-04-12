@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Upload Jacoco result
-      run: mkdir output && mkdir output/report && cp target/site/jacoco/jacoco.xml staging/report
+      run: mkdir output && mkdir output/report && cp target/site/jacoco/jacoco.xml output/report
     - uses: actions/upload-artifact@v3
       with:
         name: Test_Report
