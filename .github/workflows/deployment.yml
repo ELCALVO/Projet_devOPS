@@ -1,0 +1,25 @@
+name: Deployment
+
+on:
+  workflow_run:
+    workflows:
+      - Build and Tests
+    types:
+      - completed
+
+jobs:
+  deploy_apidocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate javadoc
+        run:
+          mvn javadoc:javadoc
+
+      - name: Deploy on gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        with:
+          branch: gh-pages
+          folder: target/site/apidocs
