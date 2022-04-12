@@ -18,13 +18,14 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Run test and generate coverage report
-        run:
-          mvn test
+        run: |
+          chmod +x gradlew
+          ./gradlew testCoverage
 
       - name: Add coverage to PR
         id: jacoco
         uses: madrapps/jacoco-report@v1.2
         with:
-          paths: ${{ github.workspace }}/target/site/jacoco/jacoco.xml
+          paths: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
           min-coverage-overall : 60
