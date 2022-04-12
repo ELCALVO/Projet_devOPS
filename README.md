@@ -1,5 +1,7 @@
 # Projet_devOPS : PyToJava for Pandas
 
+[![Build and Tests](https://github.com/ELCALVO/Projet_devOPS/actions/workflows/maven.yml/badge.svg?branch=main&event=push)](https://github.com/ELCALVO/Projet_devOPS/actions/workflows/maven.yml)
+
 ### Description et Objectif
 
 Ce dépôt fait l'objet d'un projet universitaire ayant pour objectif de développer une version java de la bibliothèque Pandas développée en python, et ce, en utilisant la technique de déploiement qui nous semble la mieux adaptée.
