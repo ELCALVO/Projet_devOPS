@@ -2,7 +2,7 @@ name: Jacoco coverage
 
 on:
   push:
-    branches: [ feature_*]
+    branches: [ feature_*, main]
   pull_request:
     branches: [ main ]
 
@@ -20,7 +20,7 @@ jobs:
       - name: Run test and generate coverage report
         run:
           mvn test
-        
+
       - name: Add coverage to PR
         id: jacoco
         uses: madrapps/jacoco-report@v1.2
