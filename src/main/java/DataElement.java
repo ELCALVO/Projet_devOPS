@@ -8,4 +8,12 @@ public class DataElement<E> {
         this.dataLabel = dataLabel;
         this.elements = elements;
     }
+
+    public ArrayList<E> getElements() {
+        return elements;
+    }
+
+    public String getDataLabel() {
+        return dataLabel;
+    }
 }
