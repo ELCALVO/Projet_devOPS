@@ -46,4 +46,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>ELCALVO</name>
+            <url>https://maven.pkg.github.com/ELCALVO/Projet_devOPS</url>
+        </repository>
+    </distributionManagement>
 </project>

@@ -9,6 +9,7 @@ on:
 
 jobs:
   deploy_apidocs:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,3 +24,11 @@ jobs:
         with:
           branch: gh-pages
           folder: target/site/apidocs
+
+  deploy_package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish package
+        run:
+          mvn deploy
+
