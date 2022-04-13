@@ -34,9 +34,10 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+          cache: maven
       - name: Publish package
         run:
           mvn -B deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
