@@ -1,6 +1,6 @@
 name: Deployment
 
-on:
+on: [push]
   workflow_run:
     workflows:
       - Build and Tests
@@ -9,7 +9,6 @@ on:
 
 jobs:
   deploy_apidocs:
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,5 +38,5 @@ jobs:
         run:
           mvn -B deploy
         env:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
