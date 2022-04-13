@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"DataFrame"},{"p":"<Unnamed>","l":"HelloWorld"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"DataElement"},{"p":"<Unnamed>","l":"DataFrame"},{"p":"<Unnamed>","l":"HelloWorld"}]
